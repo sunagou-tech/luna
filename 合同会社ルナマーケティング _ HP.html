@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)file:///Users/sai/Downloads/index_6.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>合同会社ルナマーケティング | デジタルマーケティング支援</title>
+<link href="./合同会社ルナマーケティング _ デジタルマーケティング支援_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b3e;
+    --navy-mid: #1a2f5e;
+    --gold: #b8975a;
+    --gold-light: #d4b07a;
+    --cream: #f7f4ef;
+    --gray: #6b7280;
+    --light: #f0ede8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--cream); color: var(--navy); overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,27,62,0.97); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; border-bottom: 1px solid rgba(184,151,90,0.3); }
+  .nav-logo { font-family: 'Noto Serif JP', serif; font-size: 0.9rem; color: #fff; letter-spacing: 0.12em; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* HERO */
+  #hero { min-height: 100vh; background: var(--navy); display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 64px; }
+  .hero-photo { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&q=80'); background-size: cover; background-position: center 30%; opacity: 0.45; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(13,27,62,0.88) 35%, rgba(13,27,62,0.35) 100%); }
+  .hero-line { position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(184,151,90,0.2), transparent); }
+  .hero-content { position: relative; z-index: 2; padding: 0 8%; max-width: 900px; animation: fadeUp 1s ease both; }
+  .hero-tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.2em; padding: 0.35em 1em; margin-bottom: 2rem; text-transform: uppercase; }
+  .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(2.4rem, 5vw, 4.5rem); color: #fff; line-height: 1.1; margin-bottom: 1rem; font-style: italic; }
+  .hero-title-ja { font-family: 'Noto Serif JP', serif; font-size: clamp(1.1rem, 2.2vw, 1.6rem); color: rgba(255,255,255,0.65); font-weight: 400; margin-bottom: 2.5rem; letter-spacing: 0.08em; }
+  .hero-desc { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 2; max-width: 560px; margin-bottom: 3rem; font-weight: 300; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--gold); color: var(--navy); padding: 0.9em 2.2em; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+  .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .hero-cta svg { width: 16px; height: 16px; }
+
+  /* STATS */
+  #stats { background: var(--navy-mid); padding: 4rem 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0; border-top: 1px solid rgba(184,151,90,0.25); border-bottom: 1px solid rgba(184,151,90,0.25); }
+  .stat-item { padding: 2rem; text-align: center; border-right: 1px solid rgba(184,151,90,0.15); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: var(--gold); display: block; margin-bottom: 0.4rem; }
+  .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); letter-spacing: 0.12em; }
+
+  /* COMMON */
+  section { padding: 7rem 8%; }
+  .section-tag { font-size: 0.7rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); margin-bottom: 1rem; line-height: 1.4; }
+  .section-sub { font-size: 0.9rem; color: var(--gray); line-height: 1.9; max-width: 560px; margin-bottom: 3.5rem; }
+  .divider { width: 48px; height: 2px; background: var(--gold); margin: 1.2rem 0 2rem; }
+
+  /* ABOUT */
+  #about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  .about-table tr { border-bottom: 1px solid rgba(13,27,62,0.08); }
+  .about-table td { padding: 0.9rem 0.5rem; font-size: 0.88rem; vertical-align: top; }
+  .about-table td:first-child { color: var(--navy); font-weight: 500; width: 120px; font-size: 0.82rem; letter-spacing: 0.06em; }
+  .about-table td:last-child { color: #374151; }
+  .about-right { padding-top: 3.5rem; }
+  .about-philosophy { background: var(--navy); padding: 2.5rem; color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 2; position: relative; }
+  .about-philosophy::before { content: '"'; font-family: 'DM Serif Display', serif; font-size: 5rem; color: var(--gold); opacity: 0.3; position: absolute; top: -0.5rem; left: 1.5rem; line-height: 1; }
+  .about-philosophy p { position: relative; z-index: 1; padding-top: 1.5rem; }
+
+  /* SERVICES */
+  #services { background: var(--light); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .service-card { background: #fff; border-top: 3px solid var(--gold); transition: transform 0.25s, box-shadow 0.25s; position: relative; overflow: hidden; }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(13,27,62,0.1); }
+  .service-img-wrap { overflow: hidden; }
+  .service-img { width: 100%; height: 200px; object-fit: cover; display: block; filter: saturate(0.85); transition: filter 0.3s, transform 0.4s; }
+  .service-card:hover .service-img { filter: saturate(1); transform: scale(1.03); }
+  .service-body { padding: 2rem 1.75rem; }
+  .service-num { font-family: 'DM Serif Display', serif; font-size: 2.5rem; color: rgba(184,151,90,0.2); line-height: 1; margin-bottom: 1rem; }
+  .service-name { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+  .service-name-en { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+  .service-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.9; }
+  .service-badge { display: inline-block; background: var(--navy); color: var(--gold); font-size: 0.68rem; letter-spacing: 0.1em; padding: 0.25em 0.75em; margin-top: 1rem; }
+
+  /* PROFILE */
+  #profile { background: var(--cream); }
+  .profile-text-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .profile-name { font-family: 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+  .profile-title { font-size: 0.82rem; color: var(--gold); letter-spacing: 0.12em; margin-bottom: 1.5rem; }
+  .profile-text { font-size: 0.9rem; color: var(--gray); line-height: 2; }
+  .profile-timeline { display: flex; flex-direction: column; gap: 1.25rem; padding-top: 0.5rem; }
+  .timeline-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+  .timeline-year { font-family: 'DM Serif Display', serif; font-size: 0.85rem; color: var(--gold); min-width: 70px; padding-top: 0.1rem; }
+  .timeline-desc { font-size: 0.84rem; color: #4b5563; line-height: 1.8; border-left: 1px solid rgba(184,151,90,0.3); padding-left: 1rem; }
+
+  /* FEATURE BANNER */
+  .feature-banner { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; background: var(--navy-mid); border-top: 1px solid rgba(184,151,90,0.15); border-bottom: 1px solid rgba(184,151,90,0.15); }
+  .banner-left { padding: 5rem 8%; }
+  .banner-left .section-title { color: #fff; }
+  .banner-left .section-sub { color: rgba(255,255,255,0.55); max-width: 100%; margin-bottom: 0; }
+  .banner-img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.5) brightness(0.5); }
+
+  /* RECORD */
+  #record { background: var(--navy); }
+  #record .section-title { color: #fff; }
+  #record .section-sub { color: rgba(255,255,255,0.55); }
+  .record-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: rgba(184,151,90,0.15); border: 1px solid rgba(184,151,90,0.15); }
+  .record-item { background: rgba(13,27,62,0.95); padding: 2rem; }
+  .record-icon { width: 32px; height: 32px; background: rgba(184,151,90,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+  .record-icon svg { width: 16px; height: 16px; fill: var(--gold); }
+  .record-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--gold); display: block; margin-bottom: 0.3rem; }
+  .record-desc { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+  .results-list { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .result-item { border-left: 2px solid var(--gold); padding: 0.75rem 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.03); }
+
+  /* CONTACT */
+  #contact { background: var(--cream); }
+  .contact-box { max-width: 680px; background: var(--navy); padding: 4rem; }
+  .contact-box .section-title { color: #fff; }
+  .contact-box .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 2rem; }
+  .contact-info { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-row { display: flex; gap: 1.5rem; align-items: baseline; font-size: 0.875rem; }
+  .contact-row .label { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.12em; min-width: 80px; }
+  .contact-row .val { color: rgba(255,255,255,0.8); }
+
+  /* FOOTER */
+  footer { background: #070e20; padding: 2rem 8%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(184,151,90,0.15); }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+  .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 900px) {
+    .feature-banner { grid-template-columns: 1fr; }
+    .banner-img { height: 220px; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 5%; }
+    .nav-links { display: none; }
+    section { padding: 5rem 5%; }
+    .about-grid, .profile-text-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-box { padding: 2.5rem; }
+    footer { flex-direction: column; text-align: center; }
+    #stats { padding: 2.5rem 5%; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(184,151,90,0.15); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">合同会社<span>ルナマーケティング</span></div>
+  <ul class="nav-links">
+    <li><a href="file:///Users/sai/Downloads/index_6.html#about">会社概要</a></li>
+    <li><a href="file:///Users/sai/Downloads/index_6.html#services">サービス</a></li>
+    <li><a href="file:///Users/sai/Downloads/index_6.html#record">実績</a></li>
+    <li><a href="file:///Users/sai/Downloads/index_6.html#contact">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-tag">AI × Digital Marketing</div>
+    <h1 class="hero-title">Grow Smarter<br>with AI.</h1>
+    <p class="hero-title-ja">生成AIを活用したマーケティング支援で<br>ビジネスの成長を加速します</p>
+    <p class="hero-desc">ChatGPT・生成AIツールを駆使したコンテンツ制作・集客自動化・<br>オンライン講座展開により、個人・スモールビジネスの収益化を支援します。</p>
+    <a href="file:///Users/sai/Downloads/index_6.html#contact" class="hero-cta">
+      お問い合わせ
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+    </a>
+  </div>
+</section>
+
+<div id="stats">
+  <div class="stat-item"><span class="stat-num">2,000+</span><span class="stat-label">Udemy受講生</span></div>
+  <div class="stat-item"><span class="stat-num">700</span><span class="stat-label">メルマガ読者</span></div>
+  <div class="stat-item"><span class="stat-num">30+</span><span class="stat-label">収益化支援実績</span></div>
+</div>
+
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <p class="section-tag">Company</p>
+      <h2 class="section-title">会社概要</h2>
+      <div class="divider"></div>
+      <table class="about-table">
+        <tbody><tr><td>商号</td><td>合同会社ルナマーケティング</td></tr>
+        <tr><td>設立</td><td>2025年4月10日（令和7年）</td></tr>
+        <tr><td>代表社員</td><td>菊地 啓太</td></tr>
+        <tr><td>資本金</td><td>100,000円</td></tr>
+        <tr><td>所在地</td><td>埼玉県所沢市並木7丁目1番地3-403</td></tr>
+        <tr><td>事業内容</td><td>生成AI活用マーケティング支援・オンライン教育コンテンツ制作・販売・デジタル集客コンサルティング</td></tr>
+        <tr><td>取引銀行</td><td>ー</td></tr>
+      </tbody></table>
+    </div>
+    <div class="about-right">
+      <p class="section-tag">Vision</p>
+      <h2 class="section-title">私たちのビジョン</h2>
+      <div class="divider"></div>
+      <div class="about-philosophy">
+        <p>生成AIの登場により、個人でも大企業並みのコンテンツ制作・マーケティング自動化が可能な時代になりました。<br><br>当社はAIツールの実践知識と15年以上のビジネス経験を掛け合わせ、個人事業主・スモールビジネスが最短距離で収益化できる支援体制を提供します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <p class="section-tag">Services</p>
+  <h2 class="section-title">AIを活用した事業内容・サービス</h2>
+  <div class="divider"></div>
+  <p class="section-sub">生成AIツールを最大限に活用し、集客・コンテンツ制作・収益化を効率化します。</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-img-wrap"><img class="service-img" src="./合同会社ルナマーケティング _ デジタルマーケティング支援_files/photo-1611926653458-09294b3142bf" alt="SNSマーケティング"></div>
+      <div class="service-body">
+        <div class="service-num">01</div>
+        <p class="service-name">AI活用 Webマーケティング支援</p>
+        <p class="service-name-en">AI-Powered Marketing Consulting</p>
+        <p class="service-desc">ChatGPT等の生成AIを活用したコンテンツ制作・SNS運用（X・LINE・メルマガ）の自動化支援。個人起業家が最小リソースで最大の集客効果を得られる体制を構築します。</p>
+        <span class="service-badge">生成AI活用</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img-wrap"><img class="service-img" src="./合同会社ルナマーケティング _ デジタルマーケティング支援_files/photo-1524178232363-1fb2b075b655" alt="オンライン講座"></div>
+      <div class="service-body">
+        <div class="service-num">02</div>
+        <p class="service-name">AIを使ったオンライン講座 制作・販売</p>
+        <p class="service-name-en">AI-Assisted e-Learning Production</p>
+        <p class="service-desc">生成AIで企画・台本・スライド制作を効率化し、Udemyへの講座出版を全工程サポート。販売ページ設計・プロモーションまでトータルで支援します。</p>
+        <span class="service-badge">実績 2,000名以上</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img-wrap"><img class="service-img" src="./合同会社ルナマーケティング _ デジタルマーケティング支援_files/photo-1460925895917-afdab827c52f" alt="デジタルコンテンツ"></div>
+      <div class="service-body">
+        <div class="service-num">03</div>
+        <p class="service-name">AIを活用したデジタルコンテンツ収益化</p>
+        <p class="service-name-en">AI-Driven Content Monetization</p>
+        <p class="service-desc">AIを活用したLP設計・セールスファネル構築・オンライン決済導入など、デジタル商品の収益化に必要な仕組みをまるごと構築します。</p>
+        <span class="service-badge">オンライン完結</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profile">
+  <p class="section-tag">Representative</p>
+  <h2 class="section-title">代表者プロフィール</h2>
+  <div class="divider"></div>
+  <div class="profile-text-grid">
+    <div>
+      <h3 class="profile-name">菊地 啓太</h3>
+      <p class="profile-title">代表社員 / 合同会社ルナマーケティング</p>
+      <p class="profile-text">15年以上の会社員経験（営業・企画・マネジメント）を経て、2024年に個人事業主として独立。Webマーケティングとオンライン教育の掛け合わせにより、ゼロから月商100万円・受講生2,000名超の実績を構築。2025年4月に合同会社ルナマーケティングを設立し、法人として個人・スモールビジネスのデジタル支援事業を展開中。</p>
+    </div>
+    <div class="profile-timeline">
+      <div class="timeline-item"><span class="timeline-year">2009</span><p class="timeline-desc">一般企業入社。営業・企画・マネジメントに従事。チームリーダーとして15年以上のキャリアを積む。</p></div>
+      <div class="timeline-item"><span class="timeline-year">2024.1</span><p class="timeline-desc">個人事業主として独立。オンライン教育・デジタルマーケティング事業を開始。</p></div>
+      <div class="timeline-item"><span class="timeline-year">2025.1</span><p class="timeline-desc">Udemy講座公開。受講生2,000名超・月商100万円規模に成長。メルマガ・SNSでリスト構築。</p></div>
+      <div class="timeline-item"><span class="timeline-year">2025.4</span><p class="timeline-desc">合同会社ルナマーケティングを設立。生成AIを活用したデジタル支援事業を本格展開。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="feature-banner">
+  <div class="banner-left">
+    <p class="section-tag">Our Approach</p>
+    <h2 class="section-title">AIと人の力で<br>結果を出す支援</h2>
+    <div class="divider"></div>
+    <p class="section-sub">生成AIツール（ChatGPT・画像生成AI等）を実務に組み込み、コンテンツ制作・集客・販売の各工程を効率化。AIの自動化力と代表の実践経験を掛け合わせたオンライン完結型の伴走支援が当社の強みです。</p>
+  </div>
+  <img class="banner-img" src="./合同会社ルナマーケティング _ デジタルマーケティング支援_files/photo-1553877522-43269d4ea984" alt="オンラインミーティング">
+</div>
+
+<section id="record">
+  <p class="section-tag">Track Record</p>
+  <h2 class="section-title">事業実績</h2>
+  <div class="divider" style="background:var(--gold)"></div>
+  <p class="section-sub">設立前の個人事業主時代から積み上げた実績が、当社の信頼基盤です。</p>
+  <div class="record-grid">
+    <div class="record-item">
+      <div class="record-icon"><svg viewBox="0 0 16 16"><path d="M8 1l2 4 5 .7-3.5 3.4.8 4.9L8 12.5l-4.3 2.5.8-4.9L1 6.7l5-.7z"></path></svg></div>
+      <span class="record-num">2,000+</span><p class="record-desc">Udemy受講生数<br>自社講座の累計受講生数</p>
+    </div>
+    <div class="record-item">
+      <div class="record-icon"><svg viewBox="0 0 16 16"><path d="M2 3h12v2H2zM2 7h8v2H2zM2 11h10v2H2z"></path></svg></div>
+      <span class="record-num">700名</span><p class="record-desc">メルマガ読者数<br>継続的な情報発信による読者獲得</p>
+    </div>
+    <div class="record-item">
+      <div class="record-icon"><svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm1 10H7V7h2v4zm0-6H7V3h2v2z"></path></svg></div>
+      <span class="record-num">30名+</span><p class="record-desc">クライアント収益化支援実績<br>副業・在宅起業を中心に支援</p>
+    </div>
+
+  </div>
+  <div class="results-list">
+    <div class="result-item">生成AIを活用したコンテンツ制作支援により、クライアントの情報発信を効率化</div>
+    <div class="result-item">Udemy講座制作サポートにより複数名が講師デビューを達成</div>
+    <div class="result-item">SNS・メルマガ運用支援により、副業収益化を実現したクライアント多数</div>
+    <div class="result-item">オンライン完結型の個別コンサルティングで全国のクライアントを継続支援</div>
+  </div>
+</section>
+
+<section id="contact">
+  <p class="section-tag">Contact</p>
+  <h2 class="section-title">お問い合わせ</h2>
+  <div class="divider"></div>
+  <div class="contact-box">
+    <p class="section-title">お気軽にご相談ください</p>
+    <p class="section-sub">サービスに関するご質問・ご相談はこちらからお問い合わせください。</p>
+    <div class="contact-info">
+      <div class="contact-row"><span class="label">会社名</span><span class="val">合同会社ルナマーケティング</span></div>
+      <div class="contact-row"><span class="label">代表者</span><span class="val">菊地 啓太</span></div>
+      <div class="contact-row"><span class="label">所在地</span><span class="val">埼玉県所沢市並木7丁目1番地3-403</span></div>
+      <div class="contact-row"><span class="label">ウェブ</span><span class="val">https://lunaceo.online/</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">合同会社ルナマーケティング</div>
+  <div class="footer-copy">© 2025 Luna Marketing LLC. All rights reserved.</div>
+</footer>
+
+
+
+</body></html>
